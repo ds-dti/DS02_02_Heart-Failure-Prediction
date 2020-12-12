@@ -1,4 +1,4 @@
-# Heart-Failure-Prediction
+# Heart Failure Prediction
 **Kelompok 2 DS02 (Alva, Erdy, Kushiv, Rafi)**
 
 [comment]: <> (poster disini)
