@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div class="container">
+      <div class="col-sm-12" style="text-align:center">
+        <br><br>
+        <div>
+        <h4>Hasil Prediksi:</h4>
+        {% if pred_result %}
+          <h4><strong style="color:red">Anda berisiko mengalami kegagalan jantung!</strong></h4><br>
+          <h4>Apa yang harus saya lakukan?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nunc lorem. Etiam eu mauris porta, tristique risus sit amet, cursus arcu. Nunc accumsan elit nec urna convallis vestibulum. Cras dapibus id enim vel condimentum. Donec eu mauris ac nunc molestie tristique et nec mauris. Nunc vestibulum gravida blandit. Fusce molestie dui magna, eget mattis metus hendrerit vestibulum. Nullam sed arcu id eros rutrum pulvinar vel vel ante. Phasellus sit amet leo augue. Integer finibus ligula lobortis purus imperdiet, sit amet tempor lectus pretium. Sed posuere lorem eu sem sollicitudin, mattis placerat nunc tempus. Donec maximus rhoncus condimentum.</p><br>
+        {% else %}
+          <h4><strong style="color:green">Anda tidak berisiko mengalami kegagalan jantung!</strong></h4><br>
+          <h4>Apa yang harus saya lakukan?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nunc lorem. Etiam eu mauris porta, tristique risus sit amet, cursus arcu. Nunc accumsan elit nec urna convallis vestibulum. Cras dapibus id enim vel condimentum. Donec eu mauris ac nunc molestie tristique et nec mauris. Nunc vestibulum gravida blandit. Fusce molestie dui magna, eget mattis metus hendrerit vestibulum. Nullam sed arcu id eros rutrum pulvinar vel vel ante. Phasellus sit amet leo augue. Integer finibus ligula lobortis purus imperdiet, sit amet tempor lectus pretium. Sed posuere lorem eu sem sollicitudin, mattis placerat nunc tempus. Donec maximus rhoncus condimentum.</p><br>
+        {% endif %}
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

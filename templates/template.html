@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <title>Heart Failure Prediction</title> -->
+    {% if title %}
+        <title>Heart Failure Prediction - {{ title }}</title>
+    {% else %}
+        <title>Heart Failure Prediction</title>
+    {% endif %}
+
+    {% block styles %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+      <!-- Bootstrap CSS -->
+      {{ bootstrap.load_css() }}
+    {% endblock %}
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Heart Failure Prediction</h1>
+        {% from 'bootstrap/nav.html' import render_nav_item %}
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="navbar-nav mr-auto">
+            {{ render_nav_item('home', 'Home') }}
+            {{ render_nav_item('basic', 'Basic') }}
+            {{ render_nav_item('advanced', 'Advanced') }}
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    {% block scripts %}
+      <!-- Optional JavaScript -->
+      {{ bootstrap.load_js() }}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        <p>&copy; Developed by Kelompok 2 DS02 (Telkom Digital Talent Incubator 2020)</p>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>

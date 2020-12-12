@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nunc lorem. Etiam eu mauris porta, tristique risus sit amet, cursus arcu. Nunc accumsan elit nec urna convallis vestibulum. Cras dapibus id enim vel condimentum. Donec eu mauris ac nunc molestie tristique et nec mauris. Nunc vestibulum gravida blandit. Fusce molestie dui magna, eget mattis metus hendrerit vestibulum. Nullam sed arcu id eros rutrum pulvinar vel vel ante. Phasellus sit amet leo augue. Integer finibus ligula lobortis purus imperdiet, sit amet tempor lectus pretium. Sed posuere lorem eu sem sollicitudin, mattis placerat nunc tempus. Donec maximus rhoncus condimentum.<br><br>
+          Quisque efficitur dictum mollis. Mauris porttitor vulputate augue non rutrum. Nam varius ipsum quis mi venenatis posuere. Cras consequat at arcu at commodo. Morbi eget libero magna. Nulla tincidunt feugiat justo, sit amet congue dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut neque sapien, mattis a consectetur at, hendrerit vel magna. Nullam mauris ex, rutrum eu est ut, interdum dignissim dolor. </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Basic</h5>
+              <p class="card-text">Fitur ini ditujukan bagi pasien yang ingin melakukan periksa mandiri terkait kesehatan jantungnya.</p>
+              <a href="{{ url_for('basic') }}" class="btn btn-primary">Mulai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Advanced</h5>
+              <p class="card-text">Fitur ini disarankan untuk digunakan dengan bantuan dari tenaga kesehatan profesional untuk mendapatkan hasil yang lebih akurat.</p>
+              <a href="{{ url_for('advanced') }}" class="btn btn-primary">Mulai</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

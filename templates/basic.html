@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div class="container"><br>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-4">
+          <form  action="{{ url_for('predict_basic') }}" method="post" role="form">
+            <div class="form-group">
+
+              <label for="age">Umur</label>
+              <input type="number" class="form-control" id="age" name="age">
+              <small id="age_help" class="form-text text-muted">Berapa umur anda?</small><br>
+
+              <label for="sex">Jenis Kelamin</label><br>
+              <select class="form-control" id="sex" name="sex">
+                <option value="L">Laki-Laki</option>
+                <option value="P">Perempuan</option>
+              </select>
+              <small id="sex_help" class="form-text text-muted">Apa jenis kelamin anda?</small><br>
+
+              <label for="anaemia">Riwayat Anemia</label><br>
+              <select class="form-control" id="anaemia" name="anaemia">
+                <option value="Y">Ya</option>
+                <option value="N">Tidak</option>
+              </select>
+              <small id="anaemia_help" class="form-text text-muted">Apakah anda memiliki riwayat penyakit anemia?</small><br>
+
+              <label for="diabetes">Riwayat Diabetes:</label><br>
+              <select class="form-control" id="diabetes" name="diabetes">
+                <option value="Y">Ya</option>
+                <option value="N">Tidak</option>
+              </select>
+              <small id="diabetes_help" class="form-text text-muted">Apakah anda memiliki riwayat penyakit diabetes?</small><br>
+
+              <label for="high_blood_pressure">Riwayat Tekanan Darah Tinggi:</label><br>
+              <select class="form-control" id="high_blood_pressure" name="high_blood_pressure">
+                <option value="Y">Ya</option>
+                <option value="N">Tidak</option>
+              </select>
+              <small id="high_blood_pressure_help" class="form-text text-muted">Apakah anda memiliki riwayat tekanan darah tinggi?</small><br>
+
+              <label for="smoking">Perokok Aktif:</label><br>
+              <select class="form-control" id="smoking" name="smoking">
+                <option value="Y">Ya</option>
+                <option value="N">Tidak</option>
+              </select>
+              <small id="smoking_help" class="form-text text-muted">Apakah anda seorang perokok aktif?</small><br>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>
