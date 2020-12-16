@@ -11,30 +11,30 @@
     <div class="container"><br>
       <div class="row align-items-center justify-content-center">
         <div class="col-md-4">
-          <form  action="{{ url_for('predict_advanced') }}" method="post" role="form">
+          <form  action="{{ url_for('predict_advanced') }}" method="post" role="form" name="form" onsubmit="return formvalidation()">
             <div class="form-group">
 
               <label for="age">Umur</label>
-              <input type="number" class="form-control" id="age" name="age">
+              <input type="number" class="form-control" id="age" name="age" min="0">
               <small id="age_help" class="form-text text-muted">Berapa umur anda?</small><br>
 
               <label for="ejection_fraction">Fraksi Ejeksi</label><br>
               <div class="input-group-append">
-                <input type="number" class="form-control" id="ejection_fraction" name="ejection_fraction">
+                <input type="number" class="form-control" id="ejection_fraction" name="ejection_fraction" min="0">
                 <span class="input-group-text">%</span>
               </div>
               <small id="ejection_fraction_help" class="form-text text-muted">Persentase jumlah darah yang meninggalkan jantung pada setiap kontraksi (dalam persen).</small><br>
 
               <label for="serum_creatinine">Kreatinina <i>(Serum Creatinine)</i></label><br>
               <div class="input-group-append">
-                <input type="number" class="form-control" id="serum_creatinine" name="serum_creatinine">
+                <input type="number" class="form-control" id="serum_creatinine" name="serum_creatinine" min="0">
                 <span class="input-group-text">mg/dL</span>
               </div>
               <small id="serum_creatinine_help" class="form-text text-muted">Tingkat kandungan kreatinina dalam darah (mg/dL).</small><br>
 
               <label for="serum_sodium">Sodium <i>(Serum Sodium)</i></label><br>
               <div class="input-group-append">
-                <input type="number" class="form-control" id="serum_sodium" name="serum_sodium">
+                <input type="number" class="form-control" id="serum_sodium" name="serum_sodium" min="0">
                 <span class="input-group-text">mEq/L</span>
               </div>
               <small id="serum_sodium_help" class="form-text text-muted">Tingkat kandungan sodium dalam darah (mEq/L).</small><br>
@@ -46,6 +46,22 @@
         </div>
       </div>
     </div>
+
+    <script> 
+        function formvalidation() { 
+            var age = document.forms["form"]["age"]; 
+            var ejection_fraction = document.forms["form"]["ejection_fraction"]; 
+            var serum_creatinine = document.forms["form"]["serum_creatinine"]; 
+            var serum_sodium = document.forms["form"]["serum_sodium"]; 
+
+            if (age.value == "" || ejection_fraction.value == "" || serum_creatinine.value == "" || serum_sodium.value == "") { 
+                alert("Tolong periksa kembali data yang anda masukan."); 
+                return false; 
+            }
+
+            return true; 
+        } 
+    </script> 
 
     {% endblock %}
   </body>

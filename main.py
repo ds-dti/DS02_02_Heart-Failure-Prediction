@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify, abort
-import joblib
-# import xgboost
+# import joblib
+import pickle
+import sklearn
+import xgboost
+import pandas as pd
 from flask_bootstrap import Bootstrap
 import gspread
 import oauth2client
@@ -37,19 +40,18 @@ def predict_basic():
     high_blood_pressure = 1 if request.form['high_blood_pressure']=='Y' else 0
     smoking = 1 if request.form['smoking']=='Y' else 0
 
-    row = [age, anaemia, diabetes, high_blood_pressure, sex, smoking]
-    gsheet.insert_row(row, new_row)
-
     # Predict data
-    # basic_model = joblib.load('./model/Heart Failure Prediction (Basic).joblib') 
+    basic_model = pickle.load(open('./model/basic.pkl', "rb"))
 
 
-    # predict_df = pd.DataFrame([[age, anaemia, diabetes, high_blood_pressure, sex, smoking]],
-                              # columns=['age', 'anaemia', 'diabetes', 'high_blood_pressure', 'sex', 'smoking'])
+    predict_df = pd.DataFrame([[age, anaemia, diabetes, high_blood_pressure, sex, smoking]],
+                              columns=['age', 'anaemia', 'diabetes', 'high_blood_pressure', 'sex', 'smoking'])
 
-    # pred = basic_model.predict(predict_df)[0]
+    pred = basic_model.predict(predict_df)[0]
 
-    pred = 1
+    row = [int(age), int(anaemia), int(diabetes), int(high_blood_pressure), int(sex), int(smoking), int(pred)]
+    gsheet.insert_row(row, new_row)
+    # pred = 1
     if pred==1: return render_template("basic_result.html", title='Result (Basic)', pred_result=True)
     else: return render_template("basic_result.html", title='Result (Basic)', pred_result=False)
 
@@ -70,17 +72,17 @@ def predict_advanced():
     serum_creatinine = float(request.form['serum_creatinine'])
     serum_sodium = float(request.form['serum_sodium'])
 
-    row = [age, ejection_fraction, serum_creatinine, serum_sodium]
-    gsheet.insert_row(row, new_row)
-
     # Predict data
-    # advanced_model = joblib.load('./model/Heart Failure Prediction (Advanced).joblib') 
+    advanced_model = pickle.load(open('./model/advanced.pkl', "rb"))
 
-    # predict_df = pd.DataFrame([[age, ejection_fraction, serum_creatinine, serum_sodium]],
-                              # columns=[['age', 'ejection_fraction', 'serum_creatinine', 'serum_sodium']])
+    predict_df = pd.DataFrame([[age, ejection_fraction, serum_creatinine, serum_sodium]],
+                              columns=[['age', 'ejection_fraction', 'serum_creatinine', 'serum_sodium']])
 
-    # pred = advanced_model.predict(predict_df)[0]
-    pred = 1
+    pred = advanced_model.predict(predict_df)[0]
+
+    row = [int(age), int(ejection_fraction), float(serum_creatinine), float(serum_sodium), int(pred)]
+    gsheet.insert_row(row, new_row)
+    # pred = 1
     if pred==1: return render_template("advanced_result.html", title='Result (Advanced)', pred_result=True)
     else: return render_template("advanced_result.html", title='Result (Advanced)', pred_result=False)
 
