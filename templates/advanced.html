@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
     {% extends "template.html" %}
     {% block content %}
 
     <div class="container"><br>
       <div class="row align-items-center justify-content-center">
         <div class="col-md-4">
+          <h3 style="text-align: center"><strong>Pemeriksaan Lanjutan (<em>Advanced</em>)</strong></h3>
+          <br>
           <form  action="{{ url_for('predict_advanced') }}" method="post" role="form" name="form" onsubmit="return formvalidation()">
             <div class="form-group">
 
@@ -64,5 +59,3 @@
     </script> 
 
     {% endblock %}
-  </body>
-</html>
