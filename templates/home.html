@@ -8,15 +8,29 @@
     {% extends "template.html" %}
     {% block content %}
     <div class="container">
+      <br><br>
       <div class="row">
-        <div class="col-sm-12">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nunc lorem. Etiam eu mauris porta, tristique risus sit amet, cursus arcu. Nunc accumsan elit nec urna convallis vestibulum. Cras dapibus id enim vel condimentum. Donec eu mauris ac nunc molestie tristique et nec mauris. Nunc vestibulum gravida blandit. Fusce molestie dui magna, eget mattis metus hendrerit vestibulum. Nullam sed arcu id eros rutrum pulvinar vel vel ante. Phasellus sit amet leo augue. Integer finibus ligula lobortis purus imperdiet, sit amet tempor lectus pretium. Sed posuere lorem eu sem sollicitudin, mattis placerat nunc tempus. Donec maximus rhoncus condimentum.<br><br>
-          Quisque efficitur dictum mollis. Mauris porttitor vulputate augue non rutrum. Nam varius ipsum quis mi venenatis posuere. Cras consequat at arcu at commodo. Morbi eget libero magna. Nulla tincidunt feugiat justo, sit amet congue dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut neque sapien, mattis a consectetur at, hendrerit vel magna. Nullam mauris ex, rutrum eu est ut, interdum dignissim dolor. </p>
+        <div class="col-sm-4">
+          <a href="{{ url_for('static', filename='images/poster.jpg') }}">
+            <img src="{{ url_for('static', filename='images/poster.jpg') }}" class="img-responsive" width="100%">
+          </a>
+        </div>
+        <div class="col-sm-8" style="display: flex; justify-content: center; align-items: center;">
+          <div>
+            <h3>Sedikit tentang proyek ini...</h3>
+            <p>Gagal jantung, juga dikenal sebagai gagal jantung kronis, adalah sindrom klinis yang disebabkan oleh disfungsi ventrikel. Gagal jantung adalah manifestasi serius atau tahap akhir dari berbagai penyakit jantung. <strong>Gagal jantung adalah penyakit dengan angka kematian yang tinggi</strong> dan biaya pengobatan yang tinggi. Berdasarkan pedoman <em>European Society of Cardiology (ESC)</em>, diseluruh dunia sekitar 26 juta orang dewasa hidup dengan adanya penyakit gagal jantung. <sup><a href="https://ieeexplore.ieee.org/document/8918034">[1]</a></sup>
+              <br><br>
+            Faktor-faktor risiko penyakit gagal jantung ada 2 jenis yaitu factor yang dapat dihindari dan yang tidak dapat dihindari. Faktor risiko yang tidak dapat dihindari, antara lain: usia, jenis kelamin, riwayat penyakit keluarga, dan ras. Sedangkan, faktor risiko penyakit yang dapat dihindari, antara lain: hipertensi, profil lipid yang buruk, merokok, kurangnya aktivitas fisik, obesitas, diabetes melitus, konsumsi, makanan berlemak, dan konsumsi alkohol berlebih, dan lain-lain <sup><a href="https://repository.ubaya.ac.id/37369/">[2]</a></sup></p>
+          </div>
         </div>
       </div>
+      
+      <br>
 
       <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+          <h3><strong>Mulai Diagnosis</strong></h3>
+        </div>
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
