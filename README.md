@@ -1,5 +1,5 @@
 # Heart Failure Prediction
-**Kelompok 2 DS02 (Alva, Erdy, Kushiv, Rafi)**
+**Kelompok 2 DS02 (Alva, Erdy, Kushvi, Rafi)**
 
 ![Project Poster](/static/images/poster.jpeg "Project Poster")
 
