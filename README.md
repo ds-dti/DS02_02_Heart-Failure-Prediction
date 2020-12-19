@@ -1,5 +1,5 @@
 # Heart Failure Prediction
-**Kelompok 2 DS02 (Alva, Erdy, Kushvi, Rafi)**
+**Kelompok 2 DS02 (Alva, Erdy, Kusvi, Rafi)**
 
 ![Project Poster](/static/images/poster.jpeg "Project Poster")
 
@@ -53,6 +53,7 @@ Prototype aplikasi yang sudah berjalan dan online dapat diakses **[disini](https
 5. Run web app dengan mengetik `python main.py` pada CMD
 6. Buka link yang muncul pada CMD di browser untuk menggunakan aplikasi (default ke 127.0.0.1:5000)
 7. Tekan `CTRL+C` pada keyboard untuk menutup aplikasi.
+
 *Notes: jika ingin menjalankan web app di localhost atau server anda sendiri, anda perlu untuk memiliki API untuk akses ke Google Drive dan Google Sheets. Jika anda sudah memiliki API tersebut simpan file JSON yang didpaat dari Google ke file bernama `credentials.json`dan simpan pada root folder aplikasi. Untuk cara mendapatkan API tersebut dapat dibaca [disini](https://medium.com/better-programming/integrating-google-sheets-api-with-python-flask-987d48b7674e)*
 
 ---
