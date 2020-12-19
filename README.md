@@ -1,8 +1,7 @@
 # Heart Failure Prediction
 **Kelompok 2 DS02 (Alva, Erdy, Kushiv, Rafi)**
 
-![Project Poster](/static/images/poster.jpg "Project Poster")
-[comment]: <> (video disini)
+![Project Poster](/static/images/poster.jpeg "Project Poster")
 
 ---
 
@@ -18,6 +17,9 @@
 ---
 
 ## Project Description
+
+Video Penjelasan Proyek: **[YouTube](https://youtu.be/GOGE2-fwA0E)**
+
 Gagal jantung, juga dikenal sebagai gagal jantung kronis, adalah sindrom klinis yang disebabkan oleh disfungsi ventrikel. Gagal jantung adalah manifestasi serius atau tahap akhir dari berbagai penyakit jantung. **Gagal jantung adalah penyakit dengan angka kematian yang tinggi** dan biaya pengobatan yang tinggi. Berdasarkan pedoman *European Society of Cardiology (ESC)*, diseluruh dunia sekitar 26 juta orang dewasa hidup dengan adanya penyakit gagal jantung. [<sup>[1]</sup>](https://ieeexplore.ieee.org/document/8918034)
 
 Faktor-faktor risiko penyakit gagal jantung ada 2 jenis yaitu factor yang dapat dihindari dan yang tidak dapat dihindari. Faktor risiko yang tidak dapat dihindari, antara lain: usia, jenis kelamin, riwayat penyakit keluarga, dan ras. Sedangkan, faktor risiko penyakit yang dapat dihindari, antara lain: hipertensi, profil lipid yang buruk, merokok, kurangnya aktivitas fisik, obesitas, diabetes melitus, konsumsi, makanan berlemak, dan konsumsi alkohol berlebih, dan lain-lain. [<sup>[2]</sup>](https://repository.ubaya.ac.id/37369/)
